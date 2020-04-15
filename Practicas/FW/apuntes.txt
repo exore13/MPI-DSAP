@@ -1,0 +1,12 @@
+Utilizar scatter para entregar info.
+Broadcast para repartir la fila necesaria para los calculos
+Gather para conseguir la informacion final
+
+Sacar por pantalla si nVertices <= 10
+
+n es dimension de matriz, numero de vertices.
+En cada iteracion debe ver que proceso tiene esa informacion
+
+Hace falta calcular sendCountes. Array tipo entero, nThreads size, indicando numero de elementos que enviar a cada proceso.
+
+Hace falta calcular displs, Array tipo entero, nthread size, offseet para cada proceso de dond enviar.

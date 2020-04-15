@@ -1,0 +1,29 @@
+Objetivo
+Evaluar parametros beta y tau.
+
+Coste de comunicacion = beta + tau * messageSize
+beta = latencia
+tau = tiempo necesario para enviar un byte
+
+Q1, Q3, IQR
+IQR = Q3 - Q1
+Limite Superior = Q3 + IQR * 1.5
+Limite Inferior = Q1 - IQR * 1.5
+
+
+tomamos la latencia de enviar un BYTE como latencia de enviar un mensaje vacio ya que MPI no permite enviar un mensaje vacio.
+
+Lo obtenido de sacar una media de los valores validos de 1000 transmisiones de 1byte sera Beta
+
+long double **tiempos sera usado para almacenar los tiempos de distintas mediciones
+1b, 256b, 512b, 1kb, 2kb, 4kb, 8kb, 16kb, 32kb, 64kb, 128kb, 256kb, 512kb, 1mb, 2mb y 4mb
+double *mecedora sera usado para ser redimensionado con los tamanos expresados previamente y proceder con los calculos
+
+Se hara pruebas usando calloc en lugar de malloc en la asignacion de memoria para el contenedor de datos por si el la memoria del mensaje pueda influir en la transmision.
+
+
+Probar eficiencia cambiando malloc con realloc tambien
+
+datos
+calcByte
+tiempos
